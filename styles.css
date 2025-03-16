@@ -40,42 +40,62 @@ body {
 
 .dashboard-title {
     grid-area: dashboard;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .home{
     grid-area: home;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .profile {
     grid-area: profile;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .messages {
     grid-area: messages;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .history {
     grid-area: history;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .tasks {
     grid-area: tasks;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .communities {
     grid-area: communities;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .settings {
     grid-area: settings;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .support {
     grid-area: support;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .privacy {
     grid-area: privacy;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 
@@ -226,10 +246,16 @@ body {
 }
 
 .main-content > .your-projects-container > .your-projects > .project > .project-title {
-    box-shadow: inset 0 -1px 0 0 navy;
+    box-shadow: inset 0 -1px 0 0 black;
     padding-bottom: 4px;
 }  
 
+.main-content > .your-projects-container > .your-projects > .project > .project-info {
+    height: 90%;
+    width: 90%;
+    overflow-wrap:break-word;
+    text-wrap: wrap;
+}
 
 
 /* Part 2: Announcements sections styling */
@@ -249,6 +275,18 @@ body {
 .main-content > .announcements-container > .announcements > .announcement {
     border: 1px solid black;
     background-color: white;
+    padding: 10px;
+}
+
+.main-content > .announcements-container > .announcements > .announcement:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+.main-content > .announcements-container > .announcements > .announcement:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 
@@ -268,7 +306,20 @@ body {
 .main-content > .trending-container > .trending > .trend-item {
     border: 1px solid black;
     background-color: white;
+    padding: 10px;
 }
+
+.main-content > .trending-container > .trending > .trend-item:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.main-content > .trending-container > .trending > .trend-item:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
 
 
 
