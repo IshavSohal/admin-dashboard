@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,9 +31,11 @@
                 <div>Hi there</div>
                 <div class="username">Ishav Sohal (@ishavsohal)</div>
             </div>
-            <button class="new">New</button>
-            <button class="upload">Upload</button>
-            <button class="share">Share</button>
+            <div class="buttons">
+                <button class="new">New</button>
+                <button class="upload">Upload</button>
+                <button class="share">Share</button>
+            </div>
         </div>
     </div>
     <div class="sidebar">
@@ -103,39 +105,66 @@
             <div class="container-title">Your Projects</div> 
             <div class="your-projects">
                 <div class="project">
-                    <div class="project-title">Project 1</div>
+                    <div class="item-title">Etch-A-Sketch</div>
                     <div class="project-info">
-                        This is info for project 1.
+                        A sketch pad that allow you to draw in pencil and pen, as well
+                        as switch between black and rainbow colour. Can change the size
+                        of the pen/pencil as needed
+                    </div>
+                    <div class="project-footer">
+                        <button class="star">Star</button>
+                        <button class="view" onclick="window.open('https://ishavsohal.github.io/etch-a-sketch/')">View</button>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-title">Project 2</div>
+                    <div class="item-title">Calculator</div>
                     <div class="project-info">
-                        This is info for project 2.
+                        A calculator
+                    </div>
+                    <div class="project-footer">
+                        <button class="star">Star</button>
+                        <button class="view" onclick="window.open('https://ishavsohal.github.io/calculator/')">View</button>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-title">Project 3</div>
+                    <div class="item-title">Rock Paper Scissors</div>
                     <div class="project-info">
-                        This is info for project 3.
+                        Rock paper scissors game. See if you can win.
+                    </div>
+                    <div class="project-footer">
+                        <button class="star">Star</button>
+                        <button class="view" onclick="window.open('https://ishavsohal.github.io/rock-paper-scissors/')">View</button>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-title">Project 4</div>
+                    <div class="item-title">Sign Up Form</div>
                     <div class="project-info">
-                        This is info for project 4.
+                        A sign up form template. Contains input validation to ensure all fields are valid prior 
+                        to submitting
+                    </div>
+                    <div class="project-footer">
+                        <button class="star">Star</button>
+                        <button class="view" onclick="window.open('https://ishavsohal.github.io/sign-up-form/')">View</button>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-title">Project 5</div>
+                    <div class="item-title">Landing Page</div>
                     <div class="project-info">
-                        This is info for project 5.
+                        A sample landing page
+                    </div>
+                    <div class="project-footer">
+                        <button class="star">Star</button>
+                        <button class="view" onclick="window.open('https://ishavsohal.github.io/landing-page/')">View</button>
                     </div>
                 </div>
                 <div class="project">
-                    <div class="project-title">Project 6</div>
+                    <div class="item-title">Recipes</div>
                     <div class="project-info">
-                        This is info for project 6.
+                        Some recipes
+                    </div>
+                    <div class="project-footer">
+                        <button class="star">Star</button>
+                        <button class="view" onclick="window.open('https://ishavsohal.github.io/odin-recipes/')">View</button>
                     </div>
                 </div>
             </div>
@@ -143,19 +172,41 @@
         <div class="announcements-container">
             <div class="container-title">Announcements</div>
             <div class="announcements">
-                <div class="announcement">announcement 1</div>
-                <div class="announcement">announcement 2</div>
-                <div class="announcement">announcement 3</div>
-                <div class="announcement">announcement 4</div>
+                <div class="announcement">
+                    <div class="item-title"> Site Maintenance </div>
+                    <div class="announcement-info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        <br><br>
+                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+                    </div>
+                </div>
+                <div class="announcement">
+                    <div class="item-title"> Updated Private Policy </div>
+                    <div class="announcement-info">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                    </div>
+                </div>
             </div>
         </div>
         <div class="trending-container">
             <div class="container-title">Trending</div>
             <div class="trending">
-                <div class="trend-item">Trend Item 1</div>
-                <div class="trend-item">Trend Item 2</div>
-                <div class="trend-item">Trend Item 3</div>
-                <div class="trend-item">Trend Item 4</div>
+                <div class="trend-item">
+                    <div class="dp" style="background-image: url('./images/scarface-profile.png ')"></div>
+                    <div class="username">@scarface</div>
+                    <div>Battleship</div>
+                </div>
+                <div class="trend-item">
+                    <div class="dp" style="background-image: url('./images/tyler-durden.png ')"></div>
+                    <div class="username">@durden</div>
+                    <div>Odin Book</div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="dp" style="background-image: url('./images/rambo.png ')"></div>
+                    <div class="username">@rambo</div>
+                    <div>Encrypted Messager</div>
+                </div>
             </div>
         </div>
     </div>

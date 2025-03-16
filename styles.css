@@ -11,8 +11,8 @@ body {
     width: 100%;
     padding: 0px;
     margin: 0px;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
+    /* font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    font-family: "Apercu",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
 }
 
 /* Sidebar styling */
@@ -34,68 +34,66 @@ body {
      'support'
      'privacy';
     padding: 5px;
+    gap: 5px;
     background-color: rgb(0, 149, 255);
     color: white;
 }
 
+
 .dashboard-title {
     grid-area: dashboard;
-    font-size: 30px;
+    font-size: max(2.5vw, 30px);
     font-weight: bold;
+    display: flex;
+    align-items:center;
+    gap: 5px;
+}
+
+.home, .profile, .messages, .history, .tasks, .communities, .settings, 
+.support, .privacy {
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 10px;
+    display: flex;
+    align-items:center;
+    gap: 5px;
 }
 
 .home{
     grid-area: home;
-    font-size: 20px;
-    font-weight: 600;
+
 }
 
 .profile {
     grid-area: profile;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .messages {
     grid-area: messages;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .history {
     grid-area: history;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .tasks {
     grid-area: tasks;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .communities {
     grid-area: communities;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .settings {
     grid-area: settings;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .support {
     grid-area: support;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .privacy {
     grid-area: privacy;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 
@@ -146,6 +144,7 @@ body {
     width: 80%;
     aspect-ratio: 1/1;
     place-self: center;
+    background-image: url("./images/godfather.png ");
 }
 
 .header-1 > .name {
@@ -158,12 +157,18 @@ body {
 /* Part 2: Header 2 styling */
 .header-2{
     display: grid;
-    grid-template-columns: 6fr 1fr 1fr 1fr;
+    grid-template-columns: 6fr 3fr;
     padding-top: 10px;
 }
 
+.header-2 > .buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
 
-.header-2 > .new, .header-2 > .upload, .header-2 > .share {
+
+.header-2 > .buttons > .new, .header-2 > .buttons > .upload, 
+.header-2 > .buttons > .share {
     place-self: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -172,16 +177,16 @@ body {
     background-color: rgb(0, 149, 255);
     color: white;
     font-weight: 600;
-    font-size: min(1.5vw, 16px);
+    /* font-size: min(1.5vw, 16px); */
     transition: color 0.2s;
     transition: background-color 0.2s;
 }
 
-.header-2 > .new:hover, .header-2 > .upload:hover, .header-2>.share:hover{
+.header-2 > .buttons > .new:hover, .header-2 > .buttons > .upload:hover, 
+.header-2 > .buttons > .share:hover{
     background-color: white;
     color: rgb(0, 149, 255);
 }
-
 
 
 .header-2 > .greeting {
@@ -196,6 +201,7 @@ body {
     place-self: center;
     width: 90%;
     aspect-ratio: 1/1;
+    background-image: url("./images/godfather.png ");
 }
 
 .header-2 > .greeting > .username {
@@ -238,6 +244,8 @@ body {
     border-radius: 5px;
     padding: 10px;
     transition: box-shadow 0.4s;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content > .your-projects-container > .your-projects > .project:hover {
@@ -245,17 +253,28 @@ body {
 
 }
 
-.main-content > .your-projects-container > .your-projects > .project > .project-title {
+.main-content > .your-projects-container > .your-projects > .project > .item-title {
     box-shadow: inset 0 -1px 0 0 black;
     padding-bottom: 4px;
+    font-size: 20px;
 }  
 
 .main-content > .your-projects-container > .your-projects > .project > .project-info {
-    height: 90%;
-    width: 90%;
-    overflow-wrap:break-word;
+    overflow-wrap: break-word;
     text-wrap: wrap;
+    flex: 1 1 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
 }
+
+.main-content > .your-projects-container > .your-projects > .project > .project-footer {
+    border-top: 1px dashed black;
+    flex: 0 1 auto;
+    text-align: right;
+
+}  
 
 
 /* Part 2: Announcements sections styling */
@@ -273,9 +292,10 @@ body {
 
 
 .main-content > .announcements-container > .announcements > .announcement {
-    border: 1px solid black;
     background-color: white;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content > .announcements-container > .announcements > .announcement:first-child {
@@ -288,6 +308,21 @@ body {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+.main-content > .announcements-container > .announcements > .announcement:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.main-content > .announcements-container > .announcements > .announcement > .item-title {
+    flex: 0 1 auto;
+    padding-bottom: 10px;
+}
+
+.main-content > .announcements-container > .announcements > .announcement > .announcement-info {
+    flex: 1 1 auto;
+    font-size: 12px;
+}
+
 
 
 /* Part 3: Trending section styling */
@@ -304,9 +339,12 @@ body {
 }
 
 .main-content > .trending-container > .trending > .trend-item {
-    border: 1px solid black;
     background-color: white;
     padding: 10px;
+    display: grid;
+    grid-template-columns: 50px 3fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 10px;
 }
 
 .main-content > .trending-container > .trending > .trend-item:first-child {
@@ -319,6 +357,22 @@ body {
     border-bottom-right-radius: 15px;
 }
 
+.main-content > .trending-container > .trending > .trend-item:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+
+
+.main-content > .trending-container > .trending > .trend-item > .dp {
+    grid-row: 1 / -1;
+    width: 80%;
+    aspect-ratio: 1/1;
+    place-self: center;
+}
+
+.main-content > .trending-container > .trending > .trend-item > .username {
+    align-self: end
+}
 
 
 
@@ -329,9 +383,11 @@ body {
 }
 
 .dp {
-    background-image: url("./images/godfather.png ");
     background-size: 90% 90%;
     border-radius: 200%;
     border: 2px solid rgb(0, 149, 255);
 }
 
+.item-title{
+    font-weight: 600;
+}
