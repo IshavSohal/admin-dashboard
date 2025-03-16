@@ -183,7 +183,8 @@ body {
 }
 
 .header-2 > .buttons > .new:hover, .header-2 > .buttons > .upload:hover, 
-.header-2 > .buttons > .share:hover{
+.header-2 > .buttons > .share:hover, .header-2 > .buttons > .new:focus, .header-2 > .buttons > .upload:focus, 
+.header-2 > .buttons > .share:focus{
     background-color: white;
     color: rgb(0, 149, 255);
 }
@@ -228,7 +229,7 @@ body {
 .main-content > .your-projects-container {
     grid-row: 1 / -1;
     display: grid;
-    grid-template-rows: 15px auto;
+    grid-template-rows: 40px auto;
 }
 
 .main-content > .your-projects-container > .your-projects {
@@ -282,7 +283,8 @@ body {
     grid-row: 1;
     grid-column: 2;
     display: grid;
-    grid-template-rows: 15px auto;
+    grid-template-rows: 40px auto;
+    padding-left: 10px;
 }
 
 .main-content > .announcements-container > .announcements {
@@ -330,7 +332,8 @@ body {
     grid-row: 2;
     grid-column: 2;
     display: grid;
-    grid-template-rows: 20px auto;
+    grid-template-rows: 40px auto;
+    padding-left: 10px;
 }
 
 .main-content > .trending-container > .trending {
@@ -390,4 +393,12 @@ body {
 
 .item-title{
     font-weight: 600;
+}
+
+
+.container-title {
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
